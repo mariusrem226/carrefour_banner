@@ -1,0 +1,210 @@
+body{
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.root{
+    width: 300px;
+    height: 600px;
+    position: relative;
+    background-color: #ffffff;
+    overflow: hidden;
+    
+}
+.bottom-container{
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: #00000043 0px -2px 5px ;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    color: #e70210;
+    z-index:20;
+
+}
+
+#first-screen{
+    
+    transition: transform 0.5s;
+}
+#first-screen, #second-screen{
+    width: 100%;
+    height: 100%;
+}
+
+#second-screen{
+    display: none;
+}
+
+
+#catalogue-container{
+    background-color: #f28d2c;
+    width: 100%;
+    height: 630px;
+    max-height: 630px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    z-index: 10;
+    opacity: 100%;
+    transition: max-height 1s
+    
+}
+#img-catalogue{
+    height: 300px;
+    max-height: 300px;
+    transition: transform 1s, max-height 1s;
+}
+
+
+#start-title-container{
+height: 55%;
+background-color: #e70210;
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+overflow: hidden;
+transition: height 1s;
+}
+
+.logo-container{
+    position: absolute;
+    top: 0; 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+   
+}
+.logo-container img{
+    position: absolute;
+    top: -15px;
+   height: 30px;
+   
+}
+
+.start-title{
+    color: #ffffff;
+    width: 80%;
+    font-size: 35px;
+    line-height: 60px;
+}
+
+
+/* second screen*/
+.banner{
+    background-color: #e70210;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation-name: bannerAnim;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    transform: translateY(-100%);
+    animation-timing-function: linear;
+}
+.img-banner{
+    filter: brightness(0) invert(1);
+    width: 80%;
+}
+.product-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.description-container{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+   
+    width: 85%;
+    padding:  30px 0px ;
+    margin-bottom: 30px;
+
+}
+.description-container, .img-product,.button{
+    transform: translateX(300px);
+}
+
+.description-container, .img-product, .img-price, .button{
+    transition: transform 1s;
+}
+.product-title{
+    font-size: 25px;
+    font-weight: bold;
+    text-align: end;
+    width: 50%;
+}
+.product-details{
+    font-size: 18px;
+    text-align: end;
+    width: 50%;
+}
+.img-product{
+    width: 60%;
+}
+
+.img-product-container{
+    width: 100%;
+    display: flex;
+   align-items: center;
+    position: relative;
+    flex-direction: column-reverse;
+    margin-bottom: 20px;
+}
+
+.img-price{
+    max-height: 100%;
+    max-width: 100px;
+    position: absolute;
+    bottom: 100%;
+    left: 10px;
+    transform :translateX(-300px);
+}
+
+.button{
+    background-color:#e70210;
+    width: 50%;
+    font-size: 25px;
+   display: flex;
+   justify-content: center;
+   padding: 5px 10px;
+   border-radius: 5px;
+}
+.button a{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.product-section-container{
+    transition: opacity 0.5s;
+}
+/*animations*/
+
+@keyframes bannerAnim {
+    
+    
+    0% {
+      transform: translateY(-100%);
+    }
+    15% {
+        transform: translateY(-0%);
+      }
+    85%{
+        transform: translateY(-0%);
+    }
+    100% {
+        transform: translateY(-100%);
+      }
+  }
+
+
+
+
