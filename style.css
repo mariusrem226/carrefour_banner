@@ -140,7 +140,7 @@ transition: height 1s;
     font-size: 20px;
     font-weight: bold;
     text-align: end;
-    width: 50%;
+    width: 100%;
 }
 .product-details{
     font-size: 18px;
@@ -148,7 +148,7 @@ transition: height 1s;
     width: 50%;
 }
 .img-product{
-    width: 50%;
+    height: 130px;
 }
 
 .img-product-container{
@@ -172,6 +172,7 @@ transition: height 1s;
 .button{
     background-color:#e70210;
     width: 50%;
+    height: 30px;
     font-size: 25px;
    display: flex;
    justify-content: center;
@@ -187,7 +188,14 @@ transition: height 1s;
     transition: opacity 0.5s;
 }
 /*animations*/
-
+.second-part-product{
+    width: 100%;
+    position: absolute;
+    bottom: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 @keyframes bannerAnim {
     
     

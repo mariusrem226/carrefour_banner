@@ -21,7 +21,6 @@ function resetSecondScreen(){
     const listeProduit=content.childNodes
     for (var i=0; i<listeProduit.length; i++) {
         element=listeProduit[i]
-        console.log("element",element, element.id);
         const name=element.id;
         if(name){ 
             document.getElementById(name).style.opacity="100%";
@@ -31,9 +30,7 @@ function resetSecondScreen(){
     }
 }
 function reset(name){
-    console.log("caca");
     let produit=document.getElementById(name);
-    console.log(produit);
     let price=produit.querySelector(".img-price");
 
     let title=produit.querySelector(".description-container");
@@ -41,12 +38,10 @@ function reset(name){
     let button=produit.querySelector(".button");
 
     let listElements=[price, title, imgProduit, button];
-    console.log(listElements)
     
 
     for (var i=0; i<listElements.length; i++) {
         element=listElements[i]
-        console.log("dans boucle reset", element);
         if(element&&element==price){
             element.style.transform="translateX(-300px)"
         }
@@ -90,11 +85,9 @@ async function secondScreen(){
     const listeProduit=content.childNodes
     for (var i=0; i<listeProduit.length; i++) {
         element=listeProduit[i]
-        console.log("element",element, element.id);
         const name=element.id;
 
         if(name){
-            console.log("NAAAAAAME",name)
             anim(name);
             await sleep(3500);
             document.getElementById(name).style.opacity="0%";
